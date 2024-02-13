@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbarWrapper {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  background-color: rgb(195, 236, 238);
+}
+
+.navbarWrapper a {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-decoration: none;
+  background-color: darkcyan;
+  color: white;
+
+}
+
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: darkcyan;
+}
+
+.formWrapper {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.activitiesWrapper {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  height: 50vh;
+  margin-top: 50px;
+}
+
+
+#activities {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  margin: none;
+}
+
+#activities td,
+#activities th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#activities tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#activities tr:hover {
+  background-color: #ddd;
+}
+
+#activities th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: darkcyan;
+  color: white;
+}
+
+.tableIcon {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.reactions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  width: 100vw;
+ cursor: pointer;
+}
+
+.emoticon {
+  font-size: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  transition: transform 0.3s ease-in-out;
+}
+
+.emoticon:hover {
+  transform: scale(1.1);
+}
+
+.floating-emoji {
+  position: absolute;
+  animation: float 2s ease-in-out;
+}
+
+
+
+.addButton:hover {
+  background-color: darkcyan;
+}
+
+.header {
+  width: 100%;
+  background-color: grey;
+}
+
+.header-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5%;
+}
+
+.addButton {
+  font-size: 24px;
+  padding: 10px;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 25%;
+  align-self: flex-end;
+  width: 50%;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.my-button {
+  background-color: darkcyan;
+  color: white;
+  padding: 15px 32px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  justify-content: center;
+}
+
+.my-label {
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.new {
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new:hover {
+  background-color: darkcyan;
+}
+
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 50px;
+  animation: colorChange 2s infinite;
+}
+
+
+.role {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+@keyframes colorChange {
+
+  0%,
+  100% {
+    color: rgb(74, 189, 246);
+  }
+
+  25% {
+    color: rgb(44, 116, 192);
+  }
+
+  50% {
+    color: rgb(10, 42, 227);
+  }
+
+  75% {
+    color: rgb(193, 228, 232);
+  }
+
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #activities {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 400px) {
+  #activities {
+    font-size: 0.6em;
+  }
+}
+
+@media (min-width: 600px) {
+
+  input[type=text],
+  input[type=password],
+  input[type=submit] {
+    width: 50%;
+  }
+
+  .new {
+    width: 50%;
+  }
+
+  .role {
+    width: 50%;
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    width: 70%;
+  }
+
+  .header {
+    width: 70%;
+  }
+
+  .addButton {
+    width: 8%;
+  }
+}
